@@ -1,6 +1,6 @@
 # Projeto_Gym
 
-Projeto desenvolvido por mim, Caio Lazarini Morceli, utilizando a ferramenta NetBeans no fim do meu curso técnico em inforática (2014).
+Projeto desenvolvido por mim, Caio Lazarini Morceli, utilizando a ferramenta NetBeans no fim do meu curso técnico em informática (2014).
 
 O sitema foi feito utilizando Java Swing e banco de dados MySql. A ideia deste projeto foi desenvolver um software para ser implantado em academias de ginástica onde os alunos pudessem fazer o controle de seus treinamentos pelo terminal.
 
