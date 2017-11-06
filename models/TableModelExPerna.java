@@ -1,0 +1,53 @@
+package br.com.caio.tcc.modelo;
+
+import java.util.ArrayList;
+import javax.swing.table.AbstractTableModel;
+
+public class TableModelExPerna extends AbstractTableModel{
+    private String[] nomeColunas = {"Código", "Categoria", "Nome", "Descrição"};
+    private ArrayList<Exercicio> exercicios;
+    
+    public TableModelExPerna(){
+        exercicios = new ArrayList<>();
+    }
+    
+    public TableModelExPerna(ArrayList<Exercicio> listaDeExercicios){
+        this();
+        exercicios.addAll(listaDeExercicios);
+    }
+    
+    public Exercicio retornarObjetoExercicioSelecionado(int linha){
+        return exercicios.get(linha);
+    }
+    
+    @Override
+    public int getRowCount() {
+        return exercicios.size();
+    }
+
+    @Override
+    public int getColumnCount() {
+        return nomeColunas.length;
+    }
+    
+    @Override
+    public String getColumnName(int column) {
+        return nomeColunas[column];
+    }   
+    
+    @Override
+    public Object getValueAt(int rowIndex, int columnIndex) {
+        Exercicio e = exercicios.get(rowIndex);
+        
+        switch(columnIndex){
+            case 0:
+                return e.getCodExercicio();
+            case 1:
+                return e.getCategoriaExercicio(); 
+            case 2:
+                return e.getNomeExercicio();
+            default:
+                throw new UnsupportedOperationException("Operação Sem Suporte");
+        }     
+    } 
+}
